@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 app = Flask(__name__)
 
 # ---------------------------------------
-# 🔐 Load Twilio Credentials from .env
+# Load Twilio Credentials from .env
 # ---------------------------------------
 load_dotenv()  # Load .env file
 
@@ -22,14 +22,14 @@ if not TWILIO_SID or not TWILIO_AUTH:
 client = Client(TWILIO_SID, TWILIO_AUTH)
 
 # ---------------------------------------
-# ✅ Health Check
+# Health Check
 # ---------------------------------------
 @app.route('/')
 def home():
-    return "✅ IntelliVyapaar Flask API is running."
+    return " IntelliVyapaar Flask API is running."
 
 # ---------------------------------------
-# 📥 Upload CSV and return insights only
+# Upload CSV and return insights only
 # ---------------------------------------
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -43,7 +43,7 @@ def upload_file():
         return jsonify({"error": str(e)}), 500
 
 # ---------------------------------------
-# 🧠 Upload CSV and return insights + suggestion
+# Upload CSV and return insights + suggestion
 # ---------------------------------------
 @app.route('/smart-insight', methods=['POST'])
 def smart_insight():
@@ -61,7 +61,7 @@ def smart_insight():
         return jsonify({"error": str(e)}), 500
 
 # ---------------------------------------
-# 📲 Send WhatsApp Message via Twilio
+# Send WhatsApp Message via Twilio
 # ---------------------------------------
 @app.route('/send-whatsapp', methods=['POST'])
 def send_whatsapp():
@@ -83,7 +83,7 @@ def send_whatsapp():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 # ---------------------------------------
-# 🚀 Run the Flask App
+# Run the Flask App
 # ---------------------------------------
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
