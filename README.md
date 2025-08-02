@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# VyapaarAI – Smart Sales Prediction Tool for Small Businesses
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VyapaarAI is an intelligent sales forecasting tool designed for small shopkeepers. It not only predicts future sales using machine learning but also provides key business insights like top customers, best-selling products, and daily trends. Built with a Flask backend and integrated with Twilio for smart notifications.
 
-## Available Scripts
+## Key Features
 
-In the project directory, you can run:
+- Predicts future sales using past data (Linear Regression)
+- Identifies top customers and top-selling products
+- Parses CSV sales data and extracts useful metrics
+- Sends prediction alerts via Twilio (SMS)
+- Exposes all functionality through a simple REST API
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Languages**: Python
+- **Libraries**: Pandas, NumPy, Scikit-learn, Flask
+- **API Tools**: Postman, Twilio API
+- **Platform**: Localhost (can be deployed to any backend server)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Folder Structure
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+VyapaarAI/
+├── app.py          # Flask app entry point
+├── model.py        # ML prediction and logic
+├── utils.py        # CSV handling, top customer logic
+├── twilio\_alerts.py# Twilio API integration
+├── data/           # Sample sales data
+└── README.md
 
-### `npm run build`
+````
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Pihu200106/VyapaarAI.git
+   cd VyapaarAI/backend
+````
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install the required libraries:
 
-### `npm run eject`
+   ```bash
+   pip install flask pandas numpy scikit-learn twilio
+   ```
+3. Add your Twilio credentials in a `.env` or `config.py` file.
+4. Run the Flask app:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   python app.py
+   ```
+5. Test endpoints using Postman or any HTTP client.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Endpoints
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* `POST /predict`: Predict future sales from uploaded CSV
+* `GET /top-customers`: Returns list of top customers
+* `GET /top-products`: Returns list of top-selling products
+* `POST /send-alert`: Sends prediction alert via Twilio SMS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Future Enhancements
 
-## Learn More
+* Add a clean frontend with Streamlit or React
+* Include authentication and user dashboard
+* Improve prediction accuracy with time-series models
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[GitHub – VyapaarAI](https://github.com/Pihu200106/VyapaarAI/tree/main/backend)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you want a short bullet point version of this for your resume too.
+```
