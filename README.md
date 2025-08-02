@@ -68,6 +68,3 @@ VyapaarAI/
 ## Repository
 
 [GitHub – VyapaarAI](https://github.com/Pihu200106/VyapaarAI/tree/main/backend)
-
-Let me know if you want a short bullet point version of this for your resume too.
-```
