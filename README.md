@@ -34,23 +34,17 @@ VyapaarAI/
 ## How to Run
 
 1. Clone the repository:
-   ```bash
    git clone https://github.com/Pihu200106/VyapaarAI.git
    cd VyapaarAI/backend
-````
 
 2. Install the required libraries:
-
-   ```bash
    pip install flask pandas numpy scikit-learn twilio
-   ```
 3. Add your Twilio credentials in a `.env` or `config.py` file.
 4. Run the Flask app:
-
-   ```bash
    python app.py
-   ```
-5. Test endpoints using Postman or any HTTP client.
+
+5. Run the frontend  
+   streamlit run streamlit_app.py
 
 ## API Endpoints
 
