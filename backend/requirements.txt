@@ -1,0 +1,18 @@
+# --- Core ---
+pandas
+numpy
+matplotlib
+seaborn
+statsmodels
+python-dateutil
+
+# --- Web App (Streamlit) ---
+streamlit
+requests
+
+# --- Backend (Flask API) ---
+Flask
+twilio
+
+# --- For Deployment (Optional but Helpful) ---
+gunicorn
